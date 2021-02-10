@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "mineralspawn",
+  "version": "${version}",
+  "name": "Mineral Spawn",
+  "description": "add a lot stuff to your minecraft world lmao",
+  "authors": [
+    "LonelyCDDISK",
+    "PsychoIdiot123"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/mineralspawn/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.github.lonelymusicdisc.mineralspawn.client.MineralspawnClient"
+    ],
+    "main": [
+      "com.github.lonelymusicdisc.mineralspawn.Mineralspawn"
+    ]
+  },
+  "mixins": [
+    "mineralspawn.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.1",
+    "fabric": "*",
+    "minecraft": "1.16.5"
+  }
+}

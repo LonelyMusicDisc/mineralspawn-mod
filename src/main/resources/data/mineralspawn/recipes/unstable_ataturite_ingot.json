@@ -1,0 +1,11 @@
+{
+  "type": "mineralspawn:fusion_recipe",
+  "inputA" : {
+    "item": "mineralspawn:atmosmite_ingot"
+  },
+  "inputB": {
+    "item": "mineralspawn:naturite_ingot"
+  },
+  "outputItem": "mineralspawn:unstable_ataturite_ingot",
+  "outputAmount": "20"
+}

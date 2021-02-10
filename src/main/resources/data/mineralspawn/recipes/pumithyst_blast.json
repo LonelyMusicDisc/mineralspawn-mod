@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "mineralspawn:pumithyst_ore"
+  },
+  "result": "mineralspawn:pumithyst",
+  "experience": 0.1,
+  "cookingtime": 100
+}
