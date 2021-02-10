@@ -2,6 +2,7 @@ package com.github.lonelymusicdisc.mineralspawn.Entities;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.world.ServerWorld;
@@ -34,8 +35,8 @@ public class GoldenGolem extends IronGolemEntity implements IAnimatable {
             pAnimationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("walk", true));
             return PlayState.CONTINUE;
         }
-        if (tryAttack() && !isDead()) {
-            pAnimationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("attack", false));
+        if (this.tryAttack() && !isDead()) {
+            pAnimationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("attack", true));
             return PlayState.CONTINUE;
         }
         pAnimationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("idle", true));
@@ -43,7 +44,7 @@ public class GoldenGolem extends IronGolemEntity implements IAnimatable {
     }
 
     private boolean tryAttack() {
-        return false;
+        return isAttacking();
     }
 
     @Override
